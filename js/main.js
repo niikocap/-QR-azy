@@ -47,17 +47,18 @@ function showHotline(id){
 }
 
 // Generating contacts
-function generateVCF(contact) {
-  const vcf = `
-  BEGIN:VCARD
-  VERSION:3.0
-  FN:${contact.name}
-  TEL;TYPE=CELL:${contact.phoneNumber}
-  EMAIL:${contact.email}
-  END:VCARD
-  `;
-  return vcf.trim();
-}
+function generateVCFFile(contacts) {
+    let vcfContent = 'data:text/vcard;charset=utf-8,';
+    contacts.forEach(contact => {
+      vcfContent += 'BEGIN:VCARD%0A';
+      vcfContent += `VERSION:3.0%0A`;
+      vcfContent += `FN:${contact.name}%0A`;
+      vcfContent += `TEL;TYPE=CELL:${contact.phoneNumber}%0A`;
+      vcfContent += `EMAIL:${contact.email}%0A`;
+      vcfContent += 'END:VCARD%0A';
+    });
+    return vcfContent;
+  }
 
 function generateVCFFile(contacts) {
   let vcfContent = 'data:text/vcard;charset=utf-8,';
