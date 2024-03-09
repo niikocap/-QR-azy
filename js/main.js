@@ -30,7 +30,21 @@ let infos = [
     "for" : "West Rembo",
     "infos" : "",
     "hotline" : [
-      
+      {
+        name: "PCPP (POLICE COMMUNITY PRECINT PEMBO) WEST REMBO",
+        phoneNumber : "7755-9467",
+        email : ""
+      },
+      {
+        name: "C3 (Command Control and Communication Center) HOTLINE",
+        phoneNumber : "8236-5790",
+        email : ""
+      },
+      {
+        name: "BDRRM (BRGY DISASTER RISK REDUCTION AND MANAGEMENT) CAD HOTLINE",
+        phoneNumber : "09683494625",
+        email : ""
+      } 
     ]
   },
 ]

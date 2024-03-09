@@ -11,11 +11,6 @@ body{
     height:100vh;
     grid-template-columns: auto;
   }
-  .qr{
-    display:flex;
-    flex-direction:column;
-    gap:50px
-  }
   .btn1{
     padding:15px 20px;
     cursor: pointer;
@@ -23,7 +18,7 @@ body{
     font-weight: 600;
   }
   .barangay{
-    display:grid;
+    display:none;
     place-items:center;
     grid-gap:50px
   }
@@ -51,7 +46,62 @@ body{
     border-radius: 5px;
   }
   .bigone{
-    display:none;
+    display:grid;
     place-items:center;
-    grid-gap:50px
+    background-color: white;
+    min-width: 360px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    overflow-y: scroll;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 25px;
+  }
+  .img-grp .img1{
+    width: 100%;
+  }
+  .img-grp .img2{
+    width: 100%;
+  }
+  .bold{
+    font-weight: 800;
+  }
+  .lg{
+    font-size: 20px;
+  }
+  .xl{
+    font-size: 30px
+  }
+  .center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .w-full{
+    width: 100%;
+  }
+  .red-text{
+    color: red;
+    font-weight: 600;
+    font-size: 20px
+  }
+  .list{
+    text-indent: 50px;
+  }
+  .list::before{
+    content: '- ';
+  }
+  .semi-bold{
+    font-weight: 600;
+  }
+  ul{
+    padding: 0;
+  }
+  ul li{
+    list-style: none;
+  }
+  img{
+    width: 100%;
   }
