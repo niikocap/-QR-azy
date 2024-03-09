@@ -50,22 +50,14 @@ function showHotline(id){
 function generateVCFFile(contacts) {
     let vcfContent = 'data:text/vcard;charset=utf-8,';
     contacts.forEach(contact => {
-      vcfContent += 'BEGIN:VCARD%0A';
-      vcfContent += `VERSION:3.0%0A`;
-      vcfContent += `FN:${contact.name}%0A`;
-      vcfContent += `TEL;TYPE=CELL:${contact.phoneNumber}%0A`;
-      vcfContent += `EMAIL:${contact.email}%0A`;
-      vcfContent += 'END:VCARD%0A';
+      vcfContent += 'BEGIN:VCARD\n';
+      vcfContent += `VERSION:4.0\n`;
+      vcfContent += `FN:${contact.name}\n`;
+      vcfContent += `TEL;TYPE=CELL:${contact.phoneNumber}\n`;
+      vcfContent += `EMAIL:${contact.email}\n`;
+      vcfContent += 'END:VCARD\n';
     });
     return vcfContent;
-  }
-
-function generateVCFFile(contacts) {
-  let vcfContent = 'data:text/vcard;charset=utf-8,';
-  contacts.forEach(contact => {
-    vcfContent += encodeURIComponent(generateVCF(contact)) + '%0A';
-  });
-  return vcfContent;
 }
 
 function downloadContacts(){
