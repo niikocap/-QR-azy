@@ -60,6 +60,10 @@ function showHotline(id){
   index = id;
 }
 
+function showBigOneInfo(){
+  document.querySelector(".main-screen").style.display = "none"
+  document.querySelector(".bigone").style.display = "grid"
+}
 // Generating contacts
 function generateVCFFile(contacts) {
     let vcfContent = 'data:text/vcard;charset=utf-8,';
