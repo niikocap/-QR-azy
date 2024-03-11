@@ -2,7 +2,6 @@ let index = 0;
 let infos = [
   {
     "for" : "East Rembo",
-    "infos" : "",
     "hotline" : [
       {
         name: "BRGY. EAST REMBO HOTLINE",
@@ -28,7 +27,6 @@ let infos = [
   },
   {
     "for" : "West Rembo",
-    "infos" : "",
     "hotline" : [
       {
         name: "PCPP (POLICE COMMUNITY PRECINT PEMBO) WEST REMBO",
@@ -117,3 +115,17 @@ domReady(function () {
   );
   htmlscanner.render(onScanSuccess);
 });
+
+function getBarangays(){
+  let req = new XMLHttpRequest();
+
+  req.onreadystatechange = () => {
+    if (req.readyState == XMLHttpRequest.DONE) {
+      console.log(req.responseText);
+    }
+  };
+
+  req.open("GET", "https://api.jsonbin.io/v3/b/65ee914f266cfc3fde96a7cf/latest", true);
+  req.setRequestHeader("X-Master-Key", "$2a$10$qk/TyqoLHRIEc/al97jGQO3nKyBD0X94btk/oskAhE/MI5sKXIofW");
+  req.send();
+}
