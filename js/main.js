@@ -122,7 +122,8 @@ function getBarangays(id){
   req.onreadystatechange = () => {
     if (req.readyState == XMLHttpRequest.DONE) {
       try {
-        infos = JSON.parse(req.responseText.record);
+        infos = JSON.parse(req.responseText);
+        infos = infos.record
         document.querySelector(".barangay").style.display = "grid"
         document.querySelector(".qr").style.display = "none"
       } catch (e) {
