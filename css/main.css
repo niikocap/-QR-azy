@@ -20,12 +20,10 @@ body{
   .barangay{
     display:grid;
     place-items:center;
-    grid-gap:50px
   }
   .main-screen{
     display:none;
     place-items:center;
-    grid-gap:50px;
     width: 100vh;
     height: 100vh;
   }
