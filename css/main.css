@@ -25,7 +25,9 @@ body{
   .main-screen{
     display:none;
     place-items:center;
-    grid-gap:50px
+    grid-gap:50px;
+    width: 100vh;
+    height: 100vh;
   }
   .logo{
     position: absolute;
@@ -72,6 +74,8 @@ body{
   }
   .xl{
     font-size: 30px
+  }.xl2{
+    font-size: 40px;
   }
   .center{
     display: flex;
@@ -105,3 +109,76 @@ body{
   img{
     width: 100%;
   }
+  .con1{
+    margin: 5px;
+    border-radius: 5px;
+    width: calc(99% - 25px);
+    height: calc(100vh - 20px);
+    max-width: 800px;
+    min-width: 360px;
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 20px 30px;
+  }
+  .btn-grp{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 360px;
+    width: 100%;
+    box-sizing: border-box;
+  }.btn2{
+    padding:15px 20px;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    width: 50%;
+  }
+  .red-bg{
+    background-color: red;
+  }
+
+  .section {
+    background-color: #ffffff;
+    padding: 50px 30px;
+    border: 1.5px solid #b2b2b2;
+    border-radius: 0.25em;
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.25);
+}
+.qr{
+  display: none;
+}
+#my-qr-reader {
+    padding: 20px !important;
+    border: 1.5px solid #b2b2b2 !important;
+    border-radius: 8px;
+}
+ 
+#my-qr-reader img[alt="Info icon"] {
+    display: none;
+}
+ 
+#my-qr-reader img[alt="Camera based scan"] {
+    width: 100px !important;
+    height: 100px !important;
+}
+#html5-qrcode-anchor-scan-type-change {
+  display: none !important;
+  text-decoration: none !important;
+  color: #1d9bf0;
+}
+#html5-qrcode-button-camera-permission{
+  text-decoration: none !important;
+  color: #1d9bf0;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+video {
+  width: 100% !important;
+  border: 1px solid #b2b2b2 !important;
+  border-radius: 0.25em;
+}

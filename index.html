@@ -8,17 +8,63 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <script
+        src="https://unpkg.com/html5-qrcode">
+    </script>
     <script src="js/main.js"></script>
+    
 </head>
 <body>
     <div class="container">
+        <div class="qr">
+            <div class="con1">
+                <div class="xl bold">
+                    QR-azy Easy!
+                </div>
+                <div style="height: 10px;"></div>
+                <div class="lg">
+                    <span class="red-bg lg">"Code Red? Scan Ahead!"</span>
+                </div>
+                <div style="height: 50px;"></div>
+                <div>
+                    An innovative intelligent iguanas project that revolutionize emergency hotline accesibility. through innovative QR code technology, users can quickly access vital emergency information with a simple scan, ensuring swift response in critical situations. Join us as we redifine emergency preparedness and safety!
+                </div>
+                <div style="height: 50px;"></div>
+                <h3>Scan QR Codes to Continue!</h3>
+                <div class="section">
+                    <div id="my-qr-reader">
+                    </div>
+                </div>  
+            </div>
+        </div>
         <div class="barangay">
-          <button class="btn1" style="width:250px" onclick="showHotline(0)">EAST REMBO</button>
-          <button class="btn1" style="width:250px" onclick="showHotline(1)">WEST REMBO</button>
+            <div class="con1">
+                <div class="xl2 bold">
+                    QR-azy Easy!
+                </div>
+                <div style="height: 10px;"></div>
+                <div>
+                    <span class="red-bg lg"style="color:#fff">"Code Red? Scan Ahead!"</span>
+                </div>
+                <div style="height: 50px;"></div>
+                <div>
+                    An innovative intelligent iguanas project that revolutionizes emergency hotline accessibility. Through innovative QR code technology, users can quickly access vital emergency information with a simple scan, ensuring swift response in critical situations. Join us as we redefine emergency preparedness and safety!
+                </div>
+                <div style="height: 50px;"></div>
+                <h4>Choose a barangay</h4>
+                <div class="btn-grp">
+                    <button class="btn2" onclick="showHotline(0)">EAST REMBO</button>
+                    <button class="btn2" onclick="showHotline(1)">WEST REMBO</button>
+                </div>
+                
+            </div>
         </div>
         <div class="main-screen">
-          <button class="btn1" style="width:250px" onclick="downloadContacts();">Save Hotline Number</button>
-          <button class="btn1" style="width:250px" onclick="showBigOneInfo()">The Big ONE</button>
+            <div class="con1">
+                <button class="btn1" style="width:250px" onclick="downloadContacts();">Save Hotline Number</button>
+                <button class="btn1" style="width:250px" onclick="showBigOneInfo()">The Big ONE</button>
+            </div>
+
         </div>
         <div class="bigone east">
             <div >
@@ -73,9 +119,9 @@
                 <div class="during ">
                     <p class="red-text center w-full">DURING</p>
                     <img src="img/illustration1.png" alt="" class="img3">
-                    <p class="dch"><span class="bold">DROP! </span>Get on your hands and knees wherever you are, and grab onto something sturdy.</p>
-                    <p class="dch"><span class="bold">COVER! </span>Wrap your arms around your head and neck. Crawl beneath any adjacent strong tables or desks for cover.</p>
-                    <p class="dch"><span class="bold">HOLD! </span>Hold on with one hand if you are beneath a desk or table, and be prepared to move with it if it move</p>
+                    <p class="dch"><span class="bold lg">DROP! </span>Get on your hands and knees wherever you are, and grab onto something sturdy.</p>
+                    <p class="dch"><span class="bold lg">COVER! </span>Wrap your arms around your head and neck. Crawl beneath any adjacent strong tables or desks for cover.</p>
+                    <p class="dch"><span class="bold lg">HOLD! </span>Hold on with one hand if you are beneath a desk or table, and be prepared to move with it if it move</p>
                     <div class="center w-full">
                         <p class="semi-bold">Using a wheelchair?</p>
                         <img src="img/illustration2.png" alt="" class="img4">
