@@ -108,6 +108,7 @@ domReady(function () {
   function onScanSuccess(decodeText, decodeResult) {
       if(scanning){
         scanning = false;
+        console.log(decodeText + decodeResult)
         getBarangays(decodeText + decodeResult);
         setTimeout(function(){
           scanning = true;
@@ -133,7 +134,7 @@ function getBarangays(id){
         document.querySelector(".barangay").style.display = "grid"
         document.querySelector(".qr").style.display = "none"
       } catch (e) {
-        alert("Invalid QR Code!")
+      
       }
     }
   };
