@@ -101,12 +101,19 @@ function domReady(fn) {
       document.addEventListener("DOMContentLoaded", fn);
   }
 }
-
+let scanning = true;
 domReady(function () {
 
   // If found you qr code
   function onScanSuccess(decodeText, decodeResult) {
-      getBarangays(decodeText + decodeResult);
+      if(scanning = true){
+        scanning = false;
+        alert(decodeText + decodeResult);
+        setTimeout(function(){
+          scanning = true;
+        },1000)
+      }
+      
   }
 
   let htmlscanner = new Html5QrcodeScanner(
