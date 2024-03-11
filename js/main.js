@@ -91,6 +91,8 @@ const contacts = [
 ];
 */
 
+
+/*
 function domReady(fn) {
   if (
       document.readyState === "complete" ||
@@ -101,6 +103,7 @@ function domReady(fn) {
       document.addEventListener("DOMContentLoaded", fn);
   }
 }
+
 let scanning = true;
 domReady(function () {
 
@@ -141,3 +144,4 @@ function getBarangays(id){
   req.setRequestHeader("X-Master-Key", "$2a$10$qk/TyqoLHRIEc/al97jGQO3nKyBD0X94btk/oskAhE/MI5sKXIofW");
   req.send();
 }
+*/
