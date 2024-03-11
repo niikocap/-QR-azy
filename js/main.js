@@ -106,13 +106,9 @@ domReady(function () {
 
   // If found you qr code
   function onScanSuccess(decodeText, decodeResult) {
-      if(scanning){
+      if(scanning && !scanned){
         scanning = false;
-        console.log(decodeText + decodeResult)
         getBarangays(decodeText + decodeResult);
-        setTimeout(function(){
-          scanning = true;
-        },1000)
       }
   }
 
@@ -130,12 +126,14 @@ function getBarangays(id){
     if (req.readyState == XMLHttpRequest.DONE) {
       try {
         infos = JSON.parse(req.responseText);
+        scanned = true;
         infos = infos.record
         document.querySelector(".barangay").style.display = "grid"
         document.querySelector(".qr").style.display = "none"
       } catch (e) {
       
       }
+      scanning = true;
     }
   };
 
