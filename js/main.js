@@ -106,7 +106,7 @@ domReady(function () {
 
   // If found you qr code
   function onScanSuccess(decodeText, decodeResult) {
-      alert("You Qr is : " + decodeText, decodeResult);
+      getBarangays(decodeText + decodeResult);
   }
 
   let htmlscanner = new Html5QrcodeScanner(
@@ -116,16 +116,22 @@ domReady(function () {
   htmlscanner.render(onScanSuccess);
 });
 
-function getBarangays(){
+function getBarangays(id){
   let req = new XMLHttpRequest();
 
   req.onreadystatechange = () => {
     if (req.readyState == XMLHttpRequest.DONE) {
-      console.log(req.responseText);
+      try {
+        infos = JSON.parse(req.responseText.record);
+        document.querySelector(".barangay").style.display = "grid"
+        document.querySelector(".qr").style.display = "none"
+      } catch (e) {
+        alert("Invalid QR Code!")
+      }
     }
   };
 
-  req.open("GET", "https://api.jsonbin.io/v3/b/65ee914f266cfc3fde96a7cf/latest", true);
+  req.open("GET", "https://api.jsonbin.io/v3/b/"+id+"/latest", true);
   req.setRequestHeader("X-Master-Key", "$2a$10$qk/TyqoLHRIEc/al97jGQO3nKyBD0X94btk/oskAhE/MI5sKXIofW");
   req.send();
 }
