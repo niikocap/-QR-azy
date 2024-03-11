@@ -106,7 +106,7 @@ domReady(function () {
 
   // If found you qr code
   function onScanSuccess(decodeText, decodeResult) {
-      if(scanning && !scanned){
+      if(scanning){
         scanning = false;
         getBarangays(decodeText + decodeResult);
       }
