@@ -8,19 +8,13 @@
         body{
             margin: 0 auto;
         }
-        .container{
-            height: 100vh;
-            width: 100vw;
-            display: grid;
-            place-items: center;
-        }
     </style>
     <link rel="stylesheet" href="../css/main.css">
     <script src="../js/qrcode.js"></script>
 </head>
 <body>
     <div class="container">
-        <div class="con1" style="display: grid;place-items:center;">
+        <div class="con1">
             <div class="xl2 bold">
                 QR-azy Easy!
             </div>
@@ -33,12 +27,17 @@
                 An innovative intelligent iguanas project that revolutionizes emergency hotline accessibility. Through innovative QR code technology, users can quickly access vital emergency information with a simple scan, ensuring swift response in critical situations. Join us as we redefine emergency preparedness and safety!
             </div>
             <div style="height: 50px;"></div>
-            <div id="qrcode"></div>
+            <div class="center">
+                <h4>Scan QR to Continue!</h4>
+                <div style="height: 50px;"></div>
+                <div id="qrcode" ></div>
+            </div>
+           
         </div>
     </div>
     
     <script type="text/javascript">
-        new QRCode(document.getElementById("qrcode"), "65ee914f266cfc3fde96a7cf");
+        new QRCode(document.getElementById("qrcode"), "https://niikocap.github.io/-QR-azy/");
     </script>
 </body>
 </html>

@@ -49,17 +49,17 @@ let infos = [
 
 function simulate(){
   document.querySelector(".qr").style.display = "none"
-  document.querySelector(".barangay").style.display = "grid"
+  document.querySelector(".bgy").style.display = "grid"
 }
 
 function showHotline(id){
-  document.querySelector(".barangay").style.display = "none"
+  document.querySelector(".bgy").style.display = "none"
   document.querySelector(".main-screen").style.display = "grid"
   index = id;
 }
 
 function showBigOneInfo(){
-  document.querySelector(".main-screen").style.display = "none"
+  document.querySelector(".barangay").style.display = "none"
   document.querySelector(".bigone").style.display = "grid"
 }
 // Generating contacts
