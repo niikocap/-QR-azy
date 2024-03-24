@@ -122,7 +122,6 @@ body{
     align-items: center;
     justify-content: center;
     gap: 10px;
-    min-width: 360px;
     width: 100%;
     box-sizing: border-box;
   }.btn2{
