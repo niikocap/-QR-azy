@@ -70,7 +70,6 @@ function generateVCFFile(contacts) {
       vcfContent += `VERSION:4.0\n`;
       vcfContent += `FN:${contact.name}\n`;
       vcfContent += `TEL;TYPE=CELL:${contact.phoneNumber}\n`;
-      vcfContent += `EMAIL:${contact.email}\n`;
       vcfContent += 'END:VCARD\n';
     });
     return vcfContent;
