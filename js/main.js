@@ -4,24 +4,24 @@ let infos = [
     "for" : "East Rembo",
     "hotline" : [
       {
-        name: "BRGY. EAST REMBO HOTLINE",
-        phoneNumber : "7728-1588/8881-5397 (85)",
-        email : ""
+        name: "BRGY. EAST REMBO HOTLINE (1)",
+        phoneNumber : "7728-1588",
+      },
+      {
+        name: "BRGY. EAST REMBO HOTLINE (2)",
+        phoneNumber : "8881-5397 (85)",
       },
       {
         name: "DRRM (DISASTER RISK REDUCTION AND MANAGEMENT) EAST REMBO",
         phoneNumber : "8651-3512",
-        email : ""
       },
       {
         name: "BDRRM (BRGY DISASTER RISK REDUCTION AND MANAGEMENT) CAD HOTLINE",
         phoneNumber : "09683494625",
-        email : ""
       },
       {
         name: "East Rembo Health Center",
         phoneNumber : "8832-6474",
-        email : ""
       },
     ]
   },
@@ -31,17 +31,14 @@ let infos = [
       {
         name: "PCPP (POLICE COMMUNITY PRECINT PEMBO) WEST REMBO",
         phoneNumber : "7755-9467",
-        email : ""
       },
       {
         name: "C3 (Command Control and Communication Center) HOTLINE",
         phoneNumber : "8236-5790",
-        email : ""
       },
       {
         name: "BDRRM (BRGY DISASTER RISK REDUCTION AND MANAGEMENT) CAD HOTLINE",
         phoneNumber : "09683494625",
-        email : ""
       } 
     ]
   },
@@ -67,7 +64,7 @@ function generateVCFFile(contacts) {
     let vcfContent = 'data:text/vcard;charset=utf-8,';
     contacts.forEach(contact => {
       vcfContent += 'BEGIN:VCARD\n';
-      vcfContent += `VERSION:4.0\n`;
+      vcfContent += `VERSION:3.0\n`;
       vcfContent += `FN:${contact.name}\n`;
       vcfContent += `TEL;TYPE=CELL:${contact.phoneNumber}\n`;
       vcfContent += 'END:VCARD\n';
