@@ -4,12 +4,16 @@ let infos = [
     "for" : "East Rembo",
     "hotline" : [
       {
-        name: "BRGY. EAST REMBO HOTLINE (1)",
+        name: "BRGY. EAST REMBO HOTLINE (BRGY HALL LOBBY)",
         phoneNumber : "7728-1588",
       },
       {
-        name: "BRGY. EAST REMBO HOTLINE (2)",
-        phoneNumber : "8881-5397 (85)",
+        name: "BRGY. EAST REMBO HOTLINE (BANTAY BAYAN)",
+        phoneNumber : "8881-5397",
+      },
+      {
+        name: "BRGY. EAST REMBO HOTLINE (BANTAY BAYAN)",
+        phoneNumber : "8881 5385",
       },
       {
         name: "DRRM (DISASTER RISK REDUCTION AND MANAGEMENT) EAST REMBO",
