@@ -12,7 +12,7 @@ let infos = [
         phoneNumber : "8881-5397",
       },
       {
-        name: "BRGY. EAST REMBO HOTLINE (BANTAY BAYAN)",
+        name: "BRGY. EAST REMBO HOTLINE (BRGY HALL SECOND FLOOR )",
         phoneNumber : "8881 5385",
       },
       {
