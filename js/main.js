@@ -1,4 +1,5 @@
 let index = 0;
+let backLocation = "";
 let infos = [
   {
     "for" : "East Rembo",
@@ -57,11 +58,30 @@ function showHotline(id){
   document.querySelector(".bgy").style.display = "none"
   document.querySelector(".main-screen").style.display = "grid"
   index = id;
+  backLocation = "home"
+  document.querySelector(".back").style.display = "grid"
 }
 
 function showBigOneInfo(){
   document.querySelector(".barangay").style.display = "none"
   document.querySelector(".bigone").style.display = "grid"
+  backLocation = "barangay"
+  document.querySelector(".back").style.display = "none"
+  document.querySelector(".back1").style.display = "grid"
+}
+
+function  back(){
+  if(backLocation == "home"){
+    backLocation = "";
+    document.querySelector(".main-screen").style.display = "none"
+    document.querySelector(".bgy").style.display = "grid"
+    document.querySelector(".back").style.display = "none"
+  }else if(backLocation == "barangay"){
+    document.querySelector(".bigone").style.display = "none"
+    document.querySelector(".barangay").style.display = "grid"
+    ocument.querySelector(".back").style.display = "grid"
+    backLocation = "home"
+  }
 }
 // Generating contacts
 function generateVCFFile(contacts) {
@@ -95,7 +115,6 @@ const contacts = [
   { name: 'Jane Smith', phoneNumber: '0987654321', email: 'jane@example.com' }
 ];
 */
-
 
 /*
 function domReady(fn) {

@@ -5,6 +5,7 @@ body{
     font-family: "Montserrat", sans-serif;
 }
 .container{
+
     display:grid;
     place-items:center ;
     width:100vw;
@@ -20,6 +21,7 @@ body{
   .barangay{
     display:grid;
     place-items:center;
+    position: relative;
   }
   .main-screen{
     display:none;
@@ -115,6 +117,33 @@ body{
     box-sizing: border-box;
     background-color: #fff;
     padding: 20px 30px;
+  }
+  .back{
+    display: none;
+    place-items: center;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+    background: #fff;
+    border-radius: 99px;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+    cursor: pointer;
+  }
+.back1{
+  display: none;
+  place-items: center;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border-radius: 99px;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+  .back img{
+    height: 25px;
+    width: 25px;
   }
   .btn-grp{
     display: flex;
