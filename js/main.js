@@ -65,7 +65,12 @@ function showBigOneInfo(){
 }
 // Generating contacts
 function generateVCFFile(contacts) {
-    let vcfContent = 'data:text/vcard;charset=utf-8,';
+  let vcfContent = '';
+    if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+      vcfContent = 'data:text/vcard;charset=utf-8,';
+    } else {
+      vcfContent = 'data:text/x-vcard;charset=utf-8,';
+    }
     contacts.forEach(contact => {
       vcfContent += 'BEGIN:VCARD\n';
       vcfContent += `VERSION:3.0\n`;
