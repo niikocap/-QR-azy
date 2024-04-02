@@ -79,7 +79,7 @@ function  back(){
   }else if(backLocation == "barangay"){
     document.querySelector(".bigone").style.display = "none"
     document.querySelector(".barangay").style.display = "grid"
-    ocument.querySelector(".back").style.display = "grid"
+    document.querySelector(".back").style.display = "grid"
     backLocation = "home"
   }
 }
