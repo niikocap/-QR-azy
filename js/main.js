@@ -86,11 +86,7 @@ function  back(){
 // Generating contacts
 function generateVCFFile(contacts) {
   let vcfContent = '';
-    if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
-      vcfContent = 'data:text/vcard;charset=utf-8,';
-    } else {
-      vcfContent = 'data:text/x-vcard;charset=utf-8,';
-    }
+
     contacts.forEach(contact => {
       vcfContent += 'BEGIN:VCARD\n';
       vcfContent += `VERSION:3.0\n`;
@@ -98,14 +94,19 @@ function generateVCFFile(contacts) {
       vcfContent += `TEL;TYPE=work,voice:${contact.phoneNumber}\n`;
       vcfContent += 'END:VCARD\n';
     });
+
     return vcfContent;
 }
 
 function downloadContacts(){
   const vcfFileContent = generateVCFFile(infos[index].hotline);
+  let blob = new Blob([vcfFileContent], { type: "text/vcard" });
+  let url = URL.createObjectURL(blob);
+
   const downloadLink = document.createElement('a');
   downloadLink.href = vcfFileContent;
-  downloadLink.download = `${infos[index].for}.vcf`;
+  downloadLink.download = `${infos[index].for}`;
+  downloadLink.textContent = `${infos[index].for}`;
   downloadLink.click();
 }
 
