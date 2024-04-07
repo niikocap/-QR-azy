@@ -91,6 +91,7 @@ function generateVCFFile(contacts) {
       vcfContent += 'BEGIN:VCARD\n';
       vcfContent += `VERSION:4.0\n`;
       vcfContent += `FN:${contact.name}\n`;
+      vcfContent += `EMAIL:\n`
       vcfContent += `TEL;TYPE=work,voice:${contact.phoneNumber}\n`;
       vcfContent += 'END:VCARD\n';
     });
