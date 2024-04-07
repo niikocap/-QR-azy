@@ -89,7 +89,7 @@ function generateVCFFile(contacts) {
 
     contacts.forEach(contact => {
       vcfContent += 'BEGIN:VCARD\n';
-      vcfContent += `VERSION:3.0\n`;
+      vcfContent += `VERSION:4.0\n`;
       vcfContent += `FN:${contact.name}\n`;
       vcfContent += `TEL;TYPE=work,voice:${contact.phoneNumber}\n`;
       vcfContent += 'END:VCARD\n';
@@ -100,12 +100,13 @@ function generateVCFFile(contacts) {
 
 function downloadContacts(){
   const vcfFileContent = generateVCFFile(infos[index].hotline);
+  console.log(vcfFileContent)
   let blob = new Blob([vcfFileContent], { type: "text/vcard" });
   let url = URL.createObjectURL(blob);
 
   const downloadLink = document.createElement('a');
-  downloadLink.href = vcfFileContent;
-  downloadLink.download = `${infos[index].for}`;
+  downloadLink.href = url;
+  downloadLink.download = `${infos[index].for}.vcf`;
   downloadLink.textContent = `${infos[index].for}`;
   downloadLink.click();
 }
