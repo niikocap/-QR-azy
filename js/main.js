@@ -85,26 +85,19 @@ function  back(){
 }
 // Generating contacts
 function generateVCFFile(contacts) {
-  let vcfContent = '';
+  let vcard = '';
 
     contacts.forEach(contact => {
-      vcfContent += 'BEGIN:VCARD\n';
-      vcfContent += `VERSION:4.0\n`;
-      vcfContent += `FN:${contact.name}\n`;
-      vcfContent += `EMAIL:\n`
-      vcfContent += `TEL;TYPE=work,voice:${contact.phoneNumber}\n`;
-      vcfContent += 'END:VCARD\n';
+       vcard = "BEGIN:VCARD\nVERSION:4.0\nFN:" + contact.name + "\nTEL;TYPE=work,voice:" + contact.phoneNumber + "\nEMAIL:" + "" + "\nEND:VCARD\n";
     });
 
-    return vcfContent;
+    return vcard;
 }
 
 function downloadContacts(){
   const vcfFileContent = generateVCFFile(infos[index].hotline);
-  console.log(vcfFileContent)
   let blob = new Blob([vcfFileContent], { type: "text/vcard" });
   let url = URL.createObjectURL(blob);
-
   const downloadLink = document.createElement('a');
   downloadLink.href = url;
   downloadLink.download = `${infos[index].for}.vcf`;
