@@ -1,3 +1,5 @@
+let vCardsJS = require('vcards-js');
+let vCard = vCardsJS();
 let index = 0;
 let backLocation = "";
 let infos = [
@@ -88,7 +90,7 @@ function generateVCFFile(contacts) {
   let vcard = '';
 
     contacts.forEach(contact => {
-       vcard = "BEGIN:VCARD\nVERSION:4.0\nFN:" + contact.name + "\nTEL;TYPE=work,voice:" + contact.phoneNumber + "\nEMAIL:" + "" + "\nEND:VCARD\n";
+       vcard = "BEGIN:VCARD\nVERSION:3.0\nFN;CHARSET=UTF-8:" + contact.name + "\nTEL;TYPE=CELL:" + contact.phoneNumber + "\nEND:VCARD\n";
     });
 
     return vcard;
