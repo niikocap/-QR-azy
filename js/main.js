@@ -1,5 +1,3 @@
-let vCardsJS = require('vcards-js');
-let vCard = vCardsJS();
 let index = 0;
 let backLocation = "";
 let infos = [
