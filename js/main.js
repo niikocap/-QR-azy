@@ -87,7 +87,7 @@ function  back(){
 function generateVCFFile(contacts) {
   let vcard = '';
     contacts.forEach(contact => {
-       vcard += "BEGIN:VCARD\nVERSION:3.0\nFN;CHARSET=UTF-8:" + contact.name + "\nTEL;TYPE=CELL:" + contact.phoneNumber + "\nEND:VCARD\n";
+       vcard += "BEGIN:VCARD\nVERSION:3.0\nFN:" + contact.name + "\nTEL;TYPE=CELL:" + contact.phoneNumber + "\nEND:VCARD\n";
     });
 
     return vcard;
